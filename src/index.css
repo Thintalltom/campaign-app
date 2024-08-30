@@ -1,3 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.searchContainer
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  
+}
+.bigContainer 
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btnHolder
+{
+  border: 0.5px solid #10e462;
+ 
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +28,41 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: 200px 1fr; /* Sidebar 200px, Main Content takes the rest */
+  grid-template-rows: 60px 1fr; /* Navbar 60px, Content takes the rest */
+  height: 100vh;
+}
+
+.navbar {
+  grid-column: 1 / 3; /* Navbar spans across both columns */
+  grid-row: 1 / 2;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+}
+
+.sidebar {
+  grid-column: 1 / 2; /* Sidebar occupies the first column */
+  grid-row: 2 / 3;
+  background-color: #f4f4f4;
+  padding: 10px;
+}
+
+.main-content {
+  grid-column: 2 / 3; /* Main Content occupies the second column */
+  grid-row: 2 / 3;
+  padding: 20px;
+  background-color: #fff;
+}
+

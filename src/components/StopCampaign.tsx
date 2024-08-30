@@ -1,7 +1,7 @@
 import React from 'react'
 import { FaCheckCircle } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-import './Successful.css'
+import '@styles/StopCampaign.css'
 
 export default function StopCampaign() {
   return (
